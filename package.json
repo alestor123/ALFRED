@@ -4,7 +4,7 @@
   "description": "This is a simple code for a node boilerplate",
   "main": "App.js",
   "bin": {
-    "boilerplate": "cli.js"
+    "alfred": "cli.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,5 +18,16 @@
   "bugs": {
     "url": "https://github.com/alestor123/NODE-BOILERPLATE/issues"
   },
-  "homepage": "https://github.com/alestor123/NODE-BOILERPLATE#readme"
+  "homepage": "https://github.com/alestor123/NODE-BOILERPLATE#readme",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "mlh-events": "^1.0.0",
+    "node-telegram-bot-api": "^0.66.0",
+    "puppeteer": "^22.14.0",
+    "simple-json-db": "^2.0.0",
+    "tgfancy": "^0.13.0",
+    "x-ray": "^2.3.4"
+  }
 }

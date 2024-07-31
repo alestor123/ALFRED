@@ -1,4 +1,5 @@
 #!/usr/bin/env node
 
-var bl = require('./App');
-bl()
+var bot = require('./App');
+require('dotenv').config()
+bot(process.env.TOKEN)
