@@ -1,5 +1,5 @@
 var db = require('../schema/db.js')
-var questions = [{qn:"What is your name : ",key:"fullname"},{qn:"What is your first name : ",key:"name"}]
+var questions = [{qn:"What is your name : ",key:"fullname"},{qn:"What is your first name : ",key:"name"},{qn:"What is your leetcode username : ",key:"leetcode"}]
 var i = 0
 
 // make a time out system 

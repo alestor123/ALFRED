@@ -1,0 +1,18 @@
+USER STATS : 
+USERNAME : <%= username %>
+NAME : <%= name %>
+RANK : <%= ranking %>
+REPUTATION : <%= reputation %>
+
+PROBLEMS SOLVED : 
+
+TOTAL PROBLEMS SOLVED : <%= stats.solvedProblem %>
+EASY SOLVED : <%= stats.easySolved %>
+MEDIUM : <%= stats.mediumSolved %>
+HARD : <%= stats.hardSolved %>
+NO OF PROBLEMS SOLVED TODAY : <%= submissions.countToday %>
+PROBLEMS SOLVED TODAY : 
+<% for (var i =0; i < submissions.problemsSolvedToday.length;  i++ ) { %>
+=> <%= submissions.problemsSolvedToday[i].title %> 
+<% } %>    
+PROBLEMS SOLVED REVISION: 

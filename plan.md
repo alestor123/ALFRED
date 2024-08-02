@@ -1,7 +1,12 @@
 ## tasks
 
-// post the answer on stack overflow and issue
-// SHOUT OUT TO THE DUDE WHO MADE THAT API
+post the answer on stack overflow and issue
+SHOUT OUT TO THE DUDE WHO MADE THAT API
+IMPLEMENT LOGGING SYSTEM
+IMPLEMENT STANDARDS
+IMPLEMENT MOTIVATION AND MOTIVATION LIMIT PER DAY
+
+
 
 ‌Greetings
 ‌enquire
