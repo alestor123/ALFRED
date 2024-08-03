@@ -1,0 +1,31 @@
+{
+    "main": [
+        {
+            "qn": "What is your full name : ",
+            "key": "fullname",
+            "type":"string"
+        },
+        {
+            "qn": "What is your first name : ",
+            "key": "name",
+            "type":"string"
+        },
+        {
+            "qn": "What is your leetcode username : ",
+            "key": "leetcode",
+            "type":"string"
+        },
+        {
+            "qn": "When do you wake up in HH:MM format :  ",
+            "key": "wakeupTime",
+            "type":"time"
+        },
+        {
+            "qn": "When do you go to sleep in HH:MM format : ",
+            "key": "bedTime",
+            "type":"time"
+        }
+    ],
+    "goodMorning":"Good morning! A new day brings new opportunities. Stay focused, stay productive. 🚀",
+    "goodNight":"Nighty night!  Review your tasks, plan for tomorrow, Reflect on your accomplishments and recharge for another productive day. Sweet dreams!💫"
+}
