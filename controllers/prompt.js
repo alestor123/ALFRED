@@ -1,5 +1,5 @@
 var db = require('../schema/db.js')
-var questions = [{qn:"What is your name : ",key:"fullname"},{qn:"What is your first name : ",key:"name"},{qn:"What is your leetcode username : ",key:"leetcode"}]
+var questions = [{qn:"What is your full name : ",key:"fullname"},{qn:"What is your first name : ",key:"name"},{qn:"What is your leetcode username : ",key:"leetcode"}]
 var i = 0
 
 // make a time out system 
@@ -9,7 +9,7 @@ module.exports = async (msg,bot) => {
         // console.log(text)
         userDetails[questions[j].key] = text;
     if((i==questions.length-1)) {
-         bot.sendMessage(msg.chat.id, `Welome master ${text} `);
+         bot.sendMessage(msg.chat.id, `Welome master ${userDetails["name"]} `);
          db.set(msg.chat.id,userDetails)
         }
         }) 

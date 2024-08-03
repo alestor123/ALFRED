@@ -11,8 +11,11 @@ EASY SOLVED : <%= stats.easySolved %>
 MEDIUM : <%= stats.mediumSolved %>
 HARD : <%= stats.hardSolved %>
 NO OF PROBLEMS SOLVED TODAY : <%= submissions.countToday %>
-PROBLEMS SOLVED TODAY : 
+<% if(!submissions.problemsSolvedToday.length==0) { %>
 <% for (var i =0; i < submissions.problemsSolvedToday.length;  i++ ) { %>
+
+PROBLEMS SOLVED TODAY : 
 => <%= submissions.problemsSolvedToday[i].title %> 
 <% } %>    
 PROBLEMS SOLVED REVISION: 
+<% } %>
