@@ -3,6 +3,7 @@ const prompt = require('./prompt.js');
 const leetcode = require('./leetcode.js');
 const profile = require('./profile.js');
 const responses = require('../static/reponses/main.json');
+const motivation = require('./motivation.js');
 
 
 module.exports = async (msg,bot) => {
@@ -46,7 +47,11 @@ module.exports = async (msg,bot) => {
                 break;
             case 'profile': 
             profile(msg,bot)
-            break;    
+            break; 
+            case 'motivation': 
+            motivation(msg,bot)
+            break; 
+               
                 case 'about': 
             bot.sendMessage(chatId,responses.static.about)
             break;

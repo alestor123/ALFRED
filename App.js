@@ -4,6 +4,8 @@ const prompt = require('./controllers/prompt.js');
 const leetcode = require('./controllers/leetcode.js');
 const menu = require('./controllers/menu.js');
 const greetings = require('./controllers/greetings.js');
+const motivation = require('./controllers/motivation.js');
+
 
 
 
@@ -14,7 +16,7 @@ module.exports = (token) => {
     const bot = new telegramBot(token, { polling: true });
     // bot.on('message',(msg) => )
         greetings(bot)
-
+bot.onText(/\/motivation/, (msg) => motivation(msg,bot));
 bot.onText(/\/start/, (msg) => menu(msg,bot));
 bot.onText(/\/leetcode (.+)/, (msg,arguments) => leetcode(msg,bot,arguments));
 bot.onText("/register", (msg) => prompt(msg,bot));

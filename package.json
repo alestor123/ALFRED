@@ -29,8 +29,10 @@
     "node-cron": "^3.0.3",
     "node-telegram-bot-api": "^0.66.0",
     "puppeteer": "^22.14.0",
+    "rimraf": "^6.0.1",
     "simple-json-db": "^2.0.0",
     "tgfancy": "^0.13.0",
+    "tmp": "^0.2.3",
     "x-ray": "^2.3.4"
   }
 }

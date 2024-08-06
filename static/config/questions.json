@@ -24,6 +24,10 @@
             "qn": "When do you go to sleep in HH:MM format : ",
             "key": "bedTime",
             "type":"time"
+        },
+        {
+            "qn": "Enter the youtube playlist ID from which you are going to recive motivation videos : ",
+            "key": "motivationChannelID"
         }
     ],
     "goodMorning":"Good morning! A new day brings new opportunities. Stay focused, stay productive. 🚀",

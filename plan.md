@@ -1,5 +1,7 @@
 ## tasks
-
+implement load balancing vpn
+implement a cache system
+allow user to set quality of motivation videos
 post the answer on stack overflow and issue
 SHOUT OUT TO THE DUDE WHO MADE THAT API
 IMPLEMENT A MENU
@@ -16,7 +18,9 @@ ADD PROFILE EDIT AND DELETE OPTION
 
 // ask about workout
 
+https://ytshorts.savetube.me/25-youtube-video-downloader-qwezz
 
+https://github.com/harshitethic/telegram-youtube-downloader/blob/main/index.js
 implment cron jobs
 ‌enquire
 ‌888 rule
@@ -70,3 +74,6 @@ ENQUIRY QUESTIONS
 
 
 DB STORE
+
+'/tmp/tmp-443971-gKYc17SO89tl/i-do-not-care-what-others-think-of-me-motivation-peakmotivation-peakattitude.mp4
+/tmp/tmp-445630-YGN0X1WW6d4F/i-do-not-care-what-others-think-of-me-motivation-peakmotivation-peakattitude.mp4

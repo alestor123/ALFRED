@@ -1,8 +1,6 @@
-var events = require('./utils/activity/leetcode/all.js');
+var events = require('./utils/youtube/randomVideo.js');
+
+
 (async () => {
-console.log((await events('alestor123','21212112')).submissions)
+console.log((await events("Kd-_agK8bqQ&list=PLsDH3kPvO2yyutHK9Jg1Nq5iuN1u-M0EW")))
 })();
-// const { render } = require('ejs')
-// const { readFileSync }  = require('fs')
-//  const { resolve } = require('path')
-// console.log(readFileSync(resolve(__dirname, 'templates/leetcode/stats.ejs')).toString())
