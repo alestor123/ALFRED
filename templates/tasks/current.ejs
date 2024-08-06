@@ -1,0 +1,15 @@
+TODAY'S TASKS : 
+<% if(!tasks.length==0) { %>
+<% for (var i =0; i < tasks.length;  i++ ) { %>   
+<%= (i+1) %> ) <%= tasks[i].title %> 
+DESCRIPTION : <%= tasks[i].description %>
+TYPE : <%= tasks[i].task_type.toUpperCase() %>
+STATUS : <%= (tasks[i].isCompleted ? "COMPLETED" : "INCOMPLETE") %>
+PRIORITY : <%= (tasks[i].priority.toUpperCase()) %>
+ADVICE : <%= (tasks[i].stats.toUpperCase()) %>
+DUE : <%= (tasks[i].time) %>
+
+
+<% } %>    
+<% } %>
+    

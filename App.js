@@ -5,6 +5,9 @@ const leetcode = require('./controllers/leetcode.js');
 const menu = require('./controllers/menu.js');
 const greetings = require('./controllers/greetings.js');
 const motivation = require('./controllers/motivation.js');
+const task = require('./controllers/task.js');
+const fetchtask = require('./controllers/fetchtask.js');
+
 
 
 
@@ -20,5 +23,7 @@ bot.onText(/\/motivation/, (msg) => motivation(msg,bot));
 bot.onText(/\/start/, (msg) => menu(msg,bot));
 bot.onText(/\/leetcode (.+)/, (msg,arguments) => leetcode(msg,bot,arguments));
 bot.onText("/register", (msg) => prompt(msg,bot));
+bot.onText("/task", (msg) => task(msg,bot));
+bot.onText("/getasks", (msg) => fetchtask(msg,bot));
 bot.onText(/^!.*$/, (msg) => responses(msg,bot));
 }

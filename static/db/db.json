@@ -5,6 +5,90 @@
         "leetcode": "alestor123",
         "wakeupTime": "4:00",
         "bedTime": "11:45",
-        "motivationChannelID": "d-AT77HjnXQ&list=PLhTrUQSOqTqK4tUQhLGHkmnE6F57-b4_M"
+        "motivationChannelID": "d-AT77HjnXQ&list=PLhTrUQSOqTqK4tUQhLGHkmnE6F57-b4_M",
+        "tasks": [
+            {
+                "isCompleted": true,
+                "title": "WATCH DEADPOOL",
+                "description": "WATCH DEADPOOL AT LULU MALL",
+                "task_type": "idle",
+                "time": "16:30",
+                "important": "no",
+                "urgent": "no",
+                "stats": "now",
+                "priority": "no"
+            },
+            {
+                "isCompleted": false,
+                "title": "WATCH JJK",
+                "description": "JJK IS AWESOME",
+                "task_type": "main",
+                "time": "23:30",
+                "important": "yes",
+                "urgent": "yes",
+                "stats": "now",
+                "priority": "highest"
+            },
+            {
+                "isCompleted": false,
+                "title": "WATCH LOGAN",
+                "description": "AWESOME MOVIE",
+                "task_type": "idle",
+                "time": "22:00",
+                "important": "no",
+                "urgent": "no",
+                "stats": "now",
+                "priority": "highest",
+                "priorityIndex": 3
+            },
+            {
+                "isCompleted": false,
+                "title": "TEST FOR MATRIX",
+                "description": "A SIMPLE AWESOME TEST",
+                "task_type": "main",
+                "time": "12:25",
+                "important": 0,
+                "urgent": 0,
+                "priority": "highest",
+                "stats": "now",
+                "priorityIndex": 3
+            },
+            {
+                "isCompleted": false,
+                "title": "RESEARCH",
+                "description": "WEDW",
+                "task_type": "main",
+                "time": "17:00",
+                "important": 0,
+                "urgent": 1,
+                "priority": "highest",
+                "stats": "decide",
+                "priorityIndex": 3
+            },
+            {
+                "isCompleted": false,
+                "title": "CONTRIBUTE TO OSS",
+                "description": "OSS IS AWESOME",
+                "task_type": "main",
+                "time": "17:00",
+                "important": 1,
+                "urgent": 1,
+                "priority": "low",
+                "stats": "delete",
+                "priorityIndex": 0
+            },
+            {
+                "isCompleted": false,
+                "title": "BECOME AWESOME",
+                "description": "ITS AWESOME",
+                "task_type": "main",
+                "time": "17:30",
+                "important": 1,
+                "urgent": 0,
+                "priority": "low",
+                "stats": "delegate",
+                "priorityIndex": 0
+            }
+        ]
     }
 }

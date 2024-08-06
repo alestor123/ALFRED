@@ -77,3 +77,39 @@ DB STORE
 
 '/tmp/tmp-443971-gKYc17SO89tl/i-do-not-care-what-others-think-of-me-motivation-peakmotivation-peakattitude.mp4
 /tmp/tmp-445630-YGN0X1WW6d4F/i-do-not-care-what-others-think-of-me-motivation-peakmotivation-peakattitude.mp4
+
+
+
+ # tasks 
+[]
+NAME THE TASK
+TYPE OF TASK
+when 
+check if important and urgent
+TASK PRIORITY[1 to 5]
+
+
+type of task :
+
+ACTUAL WORK
+IDLE TIME
+CHORES
+
+
+DISPLAY TASKS:
+bot.removeListener("callback_query");
+IMPLEMENT FILTER LIST
+DAILY TASK 
+MONTHLY TASK
+END DAY PLANNNER
+BASED ON ;
+SORT TASK
+ALL
+ACTUAL WORK
+IDLE TIME
+CHORES
+PRIORITY
+COMPLETED ,INCOMPLETE
+SET CRON REMINDER 
+add leetcodereminder 
+add hackathons reminder 

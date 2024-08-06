@@ -27,7 +27,8 @@
         },
         {
             "qn": "Enter the youtube playlist ID from which you are going to recive motivation videos : ",
-            "key": "motivationChannelID"
+            "key": "motivationChannelID",
+            "type":"string"
         }
     ],
     "goodMorning":"Good morning! A new day brings new opportunities. Stay focused, stay productive. 🚀",

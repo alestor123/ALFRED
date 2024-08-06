@@ -4,11 +4,16 @@ const leetcode = require('./leetcode.js');
 const profile = require('./profile.js');
 const responses = require('../static/reponses/main.json');
 const motivation = require('./motivation.js');
+const task = require('./task.js');
+const fetchtask = require('./fetchtask.js');
+
+
 
 
 module.exports = async (msg,bot) => {
     const chatId = msg.chat.id
     const name = db.get(chatId).name
+    bot.removeListener("callback_query");
     bot.sendMessage(
       chatId,
       `Welcome, Master ${name || ""}! I'm Alfred Pennyworth, your trusted butler and productivity assistant. I'll help you stay on top of your tasks, manage your time, and achieve your goals. \n PLEASE CHOOSE AN OPTION BELOW:`,
@@ -19,7 +24,7 @@ module.exports = async (msg,bot) => {
             [{ text: 'PROFILE', callback_data: 'profile' }],
             [{ text: 'LEETCODE STATUS', callback_data: 'leetcode' }],
             [{ text: 'DAILY REPORT', callback_data: 'dailyreport' }],
-            [{ text: 'CURRENT TASK', callback_data: 'currenttask' }],
+            [{ text: 'TODAYS TASK', callback_data: 'currenttask' }],
             [{ text: 'ADD TASK', callback_data: 'addtask' }],
             [{ text: 'EVENTS', callback_data: 'events' }],
             [{ text: 'AVAILABLITY', callback_data: 'availablity' }],
@@ -34,6 +39,7 @@ module.exports = async (msg,bot) => {
       }
     )
     bot.on('callback_query', async (callbackQuery) => {
+
         const chatId = callbackQuery.message.chat.id
         const data = callbackQuery.data
         switch (data) {
@@ -50,6 +56,12 @@ module.exports = async (msg,bot) => {
             break; 
             case 'motivation': 
             motivation(msg,bot)
+            break; 
+            case 'addtask': 
+            task(msg,bot)
+            break; 
+            case 'currenttask': 
+            fetchtask(msg,bot)
             break; 
                
                 case 'about': 

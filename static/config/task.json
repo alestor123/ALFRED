@@ -1,0 +1,95 @@
+{
+    "main": [
+        {
+            "qn": "NAME OF THE TASK : ",
+            "key": "title",
+            "type":"string"
+        },
+        {
+            "qn": "DESCRIPTION FOR THE TASK : ",
+            "key": "description",
+            "type":"string"
+        },
+        {
+            "qn": "TYPE OF TASK : ",
+            "key": "task_type",
+            "type":"option",
+            "option_reply":["main","side_hustle","idle","chores"],
+                "inline_keyboard": [
+                  [{ "text": "MAIN", "callback_data": "main" }],
+                  [{ "text": "SIDE HUSTLE", "callback_data": "side_hustle" }],
+                  [{ "text": "IDLE", "callback_data": "idle" }],
+                  [{ "text": "CHORES", "callback_data": "chores" }]
+                  
+                ]
+        
+    },
+        {
+            "qn": "START TIME : ",
+            "key": "time",
+            "type":"starTime"
+        },
+        {
+            "qn": "END TIME : ",
+            "key": "time",
+            "type":"endTime"
+        },
+        {
+            "qn": "IS THE TASK IMPORTANT(YES/NO) :  ",
+            "key": "important",
+            "type":"option",
+            "option_reply":["yes","no"],
+            
+                "inline_keyboard": [
+                  [{ "text": "YES", "callback_data": "yes" }],
+                  [{ "text": "NO", "callback_data": "no" }]
+                  
+                ]
+        
+        },
+        {
+            "qn": "IS THE TASK URGENT(YES/NO) :  ",
+            "key": "urgent",
+            "type":"option",
+            "option_reply":["yes","no"],
+
+                "inline_keyboard": [
+                  [{ "text": "YES", "callback_data": "yes" }],
+                  [{ "text": "NO", "callback_data": "no" }]
+                  
+                ]
+        
+        },
+        {
+            "qn": "SET THE TASK PRIORITY : ",
+            "key": "priority",
+            "type":"option",
+            "option_reply":["low","medium","high","highest" ],
+                "inline_keyboard": [
+                  [{ "text": "HIGHEST", "callback_data": "highest" }],
+                  [{ "text": "HIGH", "callback_data": "high" }],
+                  [{ "text": "MEDIUM", "callback_data": "medium" }],
+                  [{ "text": "LOW", "callback_data": "low" }]
+
+                ]
+        },  {
+            "qn": "PERIODICITY OF THE TASK :  ",
+            "key": "urgent",
+            "type":"option",
+            "option_reply":["yes","no"],
+
+                "inline_keyboard": [
+                  [{ "text": "JUST FOR TODAY", "callback_data": "today" }],
+                  [{ "text": "DAILY", "callback_data": "daily" }],
+                  [{ "text": "MONTHLY", "callback_data": "monthly" }],
+                  [{ "text": "YEARLY", "callback_data": "yearly" }]
+
+                  
+                ]
+        
+        }
+        
+    ],
+    "priority_index":["low","medium","high","highest" ],
+    "matrix":[["now","decide"],["delegate","delete"]]
+}
