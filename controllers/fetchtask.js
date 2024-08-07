@@ -4,12 +4,14 @@ const { readFileSync }  = require('fs')
 const { render } = require('ejs')
 const { resolve } = require('path')
 const rank = require('../utils/rank/rank.js');
-
+var userDATA;
 
 module.exports = (msg,bot) => {
 bot.removeListener("callback_query");
 const chatId = msg.chat.id;
-const tasks = rank(db.get(chatId))
+userDATA = db.get(chatId);
+const tasks = rank(userDATA)
+
 bot.sendMessage(
     chatId,
     "FETCH TASKS :",
@@ -63,7 +65,33 @@ bot.sendMessage(
         }
       })
 }
-function sendMessage(bot,chatID,tasks) {
-    bot.sendMessage(chatID,(render(readFileSync(resolve('templates/tasks/current.ejs')).toString(), {tasks})));
+async function sendMessage(bot,chatID,tasks) {
+const msgPrompt = await bot.sendMessage(chatID,(render(readFileSync(resolve('templates/tasks/current.ejs')).toString(), {tasks})),{
+  reply_markup: {
+      force_reply: true,
+      input_field_placeholder: "Reply with your answer",
 
+  },
+});
+await bot.onReplyToMessage(chatID, msgPrompt.message_id, (msg_obj) => {
+  if(msg_obj.text.toLowerCase().split(' ')[0]=="delete") {
+   const arr = msg_obj.text.toLowerCase().split(' ')[1].split(',')
+    console.log("delete command")
+    arr.forEach(e => {
+    tasks.splice(((Number(e)-1)),1)
+    bot.sendMessage(chatID,`TASK NO ${e} HAS BEEN DELETED !!`)
+    })
+    userDATA.tasks= (tasks)
+    db.set(chatID,userDATA)
+  
+  }
+    else {
+    msg_obj.text.split(',').forEach((e) => {
+      tasks[((Number(e)-1))].isCompleted = !tasks[((Number(e)-1))].isCompleted
+      userDATA.tasks = tasks;
+      db.set(chatID,userDATA)
+      bot.sendMessage(chatID,`TASK NO ${e} HAS BEEN MARKED ${ tasks[((Number(e)-1))].isCompleted ? "COMPLETED" : "INCOMPLETE" } !!`)
+    })
+  }
+  })
 }

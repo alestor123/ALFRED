@@ -129,3 +129,7 @@ make a ranking system for sorting on basis of :
 - stats
 - registered order 1
 - task type 
+
+
+# UPDATE DELETE : 
+ ADD A DELETE ALL OPTION

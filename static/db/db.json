@@ -15,40 +15,6 @@
         "idlePrefTime": "16:00-16:30",
         "tasks": [
             {
-                "isCompleted": true,
-                "title": "WATCH DEADPOOL",
-                "description": "WATCH DEADPOOL AT LULU MALL",
-                "task_type": "idle",
-                "time": "16:30",
-                "important": "no",
-                "urgent": "no",
-                "stats": "now",
-                "priority": "no"
-            },
-            {
-                "isCompleted": false,
-                "title": "WATCH JJK",
-                "description": "JJK IS AWESOME",
-                "task_type": "main",
-                "time": "23:30",
-                "important": "yes",
-                "urgent": "yes",
-                "stats": "now",
-                "priority": "highest"
-            },
-            {
-                "isCompleted": false,
-                "title": "WATCH LOGAN",
-                "description": "AWESOME MOVIE",
-                "task_type": "idle",
-                "time": "22:00",
-                "important": "no",
-                "urgent": "no",
-                "stats": "now",
-                "priority": "highest",
-                "priorityIndex": 3
-            },
-            {
                 "isCompleted": false,
                 "title": "TEST FOR MATRIX",
                 "description": "A SIMPLE AWESOME TEST",
@@ -59,6 +25,17 @@
                 "priority": "highest",
                 "stats": "now",
                 "priorityIndex": 3
+            },
+            {
+                "isCompleted": true,
+                "title": "WATCH DEADPOOL",
+                "description": "WATCH DEADPOOL AT LULU MALL",
+                "task_type": "idle",
+                "time": "16:30",
+                "important": "no",
+                "urgent": "no",
+                "stats": "now",
+                "priority": "no"
             },
             {
                 "isCompleted": false,
@@ -73,7 +50,7 @@
                 "priorityIndex": 3
             },
             {
-                "isCompleted": false,
+                "isCompleted": true,
                 "title": "CONTRIBUTE TO OSS",
                 "description": "OSS IS AWESOME",
                 "task_type": "main",
@@ -83,45 +60,6 @@
                 "priority": "low",
                 "stats": "delete",
                 "priorityIndex": 0
-            },
-            {
-                "isCompleted": false,
-                "title": "BECOME AWESOME",
-                "description": "ITS AWESOME",
-                "task_type": "main",
-                "time": "17:30",
-                "important": 1,
-                "urgent": 0,
-                "priority": "low",
-                "stats": "delegate",
-                "priorityIndex": 0
-            },
-            {
-                "isCompleted": false,
-                "title": "TO BE AN GITUHB CAMPUS EXPERT",
-                "description": "IT WOULD BE REALLY AWESOME",
-                "task_type": "goals",
-                "time": "2:30",
-                "important": 0,
-                "urgent": 1,
-                "priority": "highest",
-                "stats": "decide",
-                "priorityIndex": 3,
-                "createAT": 1723001308943
-            },
-            {
-                "isCompleted": false,
-                "title": "WTH",
-                "description": "A LOT OF NOISE",
-                "task_type": "main",
-                "time": "5:00",
-                "important": 0,
-                "urgent": 0,
-                "priority": "highest",
-                "periodicity": "daily",
-                "stats": "now",
-                "priorityIndex": 3,
-                "createAT": 1723004202827
             }
         ]
     }
