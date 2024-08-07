@@ -19,7 +19,8 @@
                   [{ "text": "MAIN", "callback_data": "main" }],
                   [{ "text": "SIDE HUSTLE", "callback_data": "side_hustle" }],
                   [{ "text": "IDLE", "callback_data": "idle" }],
-                  [{ "text": "CHORES", "callback_data": "chores" }]
+                  [{ "text": "CHORES", "callback_data": "chores" }],
+                  [{ "text": "GOALS", "callback_data": "goals" }]
                   
                 ]
         
@@ -74,7 +75,7 @@
                 ]
         },  {
             "qn": "PERIODICITY OF THE TASK :  ",
-            "key": "urgent",
+            "key": "periodicity",
             "type":"option",
             "option_reply":["yes","no"],
 

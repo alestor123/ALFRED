@@ -21,7 +21,7 @@
             "type":"time"
         },
         {
-            "qn": "When do you go to sleep in HH:MM format : ",
+            "qn": "When do you go to sleep in HH:MM format() : ",
             "key": "bedTime",
             "type":"time"
         },
@@ -29,6 +29,30 @@
             "qn": "Enter the youtube playlist ID from which you are going to recive motivation videos : ",
             "key": "motivationChannelID",
             "type":"string"
+        },
+        {
+            "qn": "Set motivation limit : ",
+            "key": "motivationLimit"
+        },
+        {
+            "qn": "Preferred time to do main task format (HH:MM-HH:MM): ",
+            "key": "mainPrefTime"
+        },
+        {
+            "qn": "Preferred time to do side hustle related task format (HH:MM-HH:MM): ",
+            "key": "hustlePrefTime"
+        },
+        {
+            "qn": "Preferred time to do tasks related to chores format (HH:MM-HH:MM): ",
+            "key": "chorePrefTime"
+        },
+        {
+            "qn": "Preferred time to do task related to your long term goals format (HH:MM-HH:MM): ",
+            "key": "goalPrefTime"
+        },
+        {
+            "qn": "Preferred time to do idle task format (HH:MM-HH:MM): ",
+            "key": "idlePrefTime"
         }
     ],
     "goodMorning":"Good morning! A new day brings new opportunities. Stay focused, stay productive. 🚀",

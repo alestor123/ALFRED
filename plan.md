@@ -97,11 +97,12 @@ CHORES
 
 
 DISPLAY TASKS:
+add option for periodicity
+IMPLEMENT GOALS
 bot.removeListener("callback_query");
 IMPLEMENT FILTER LIST
 DAILY TASK 
 MONTHLY TASK
-END DAY PLANNNER
 BASED ON ;
 SORT TASK
 ALL
@@ -113,3 +114,18 @@ COMPLETED ,INCOMPLETE
 SET CRON REMINDER 
 add leetcodereminder 
 add hackathons reminder 
+END DAY PLANNNER reminder
+
+
+# SERVER MAINTINNANCE TASKS : 
+RESET MOTIVATION
+REMINDER TO DO DIFF TYPE OF TASKS 
+
+make a ranking system for sorting on basis of :
+- Add a preferred Time for task (5)
+- on basis of start time 4 
+- priority index 
+- on basis of due time 3
+- stats
+- registered order 1
+- task type 

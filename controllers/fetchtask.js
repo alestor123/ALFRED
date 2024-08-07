@@ -3,12 +3,13 @@ var db = require('../schema/db.js')
 const { readFileSync }  = require('fs')
 const { render } = require('ejs')
 const { resolve } = require('path')
+const rank = require('../utils/rank/rank.js');
 
 
 module.exports = (msg,bot) => {
 bot.removeListener("callback_query");
 const chatId = msg.chat.id;
-const tasks = db.get(chatId).tasks
+const tasks = rank(db.get(chatId))
 bot.sendMessage(
     chatId,
     "FETCH TASKS :",
@@ -22,6 +23,8 @@ bot.sendMessage(
           [{ text: 'SIDE HUSTLE', callback_data: 'fetch_side_hustle' }],
           [{ "text": "IDLE", "callback_data": "fetch_idle" }],
           [{ "text": "CHORES", "callback_data": "fetch_chores" }],
+          [{ "text": "GOALS", "callback_data": "fetch_goals" }],
+
         ],
       },
     })
@@ -52,9 +55,9 @@ bot.sendMessage(
             case 'fetch_chores': 
             sendMessage(bot,chatId,tasks.filter(e => e.task_type =="chores"))
             break; 
-                case 'about': 
-            bot.sendMessage(chatId,responses.static.about)
-            break;
+                case 'fetch_goals': 
+                sendMessage(bot,chatId,tasks.filter(e => e.task_type =="goals"))
+                break;
             default:
             break
         }

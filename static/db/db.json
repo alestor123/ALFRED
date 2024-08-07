@@ -6,6 +6,13 @@
         "wakeupTime": "4:00",
         "bedTime": "11:45",
         "motivationChannelID": "d-AT77HjnXQ&list=PLhTrUQSOqTqK4tUQhLGHkmnE6F57-b4_M",
+        "motivationLimit": 2,
+        "motivationCount": 3,
+        "mainPrefTime": "8:00-17:00",
+        "hustlePrefTime": "19:00-22:00",
+        "chorePrefTime": "22:00-22:45",
+        "goalPrefTime": "04:00-07:00",
+        "idlePrefTime": "16:00-16:30",
         "tasks": [
             {
                 "isCompleted": true,
@@ -88,6 +95,33 @@
                 "priority": "low",
                 "stats": "delegate",
                 "priorityIndex": 0
+            },
+            {
+                "isCompleted": false,
+                "title": "TO BE AN GITUHB CAMPUS EXPERT",
+                "description": "IT WOULD BE REALLY AWESOME",
+                "task_type": "goals",
+                "time": "2:30",
+                "important": 0,
+                "urgent": 1,
+                "priority": "highest",
+                "stats": "decide",
+                "priorityIndex": 3,
+                "createAT": 1723001308943
+            },
+            {
+                "isCompleted": false,
+                "title": "WTH",
+                "description": "A LOT OF NOISE",
+                "task_type": "main",
+                "time": "5:00",
+                "important": 0,
+                "urgent": 0,
+                "priority": "highest",
+                "periodicity": "daily",
+                "stats": "now",
+                "priorityIndex": 3,
+                "createAT": 1723004202827
             }
         ]
     }

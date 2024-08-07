@@ -1,5 +1,5 @@
 var db = require('../schema/db.js')
-var questions = require('../static/config/task.json').main
+var questions = require('../static/config/questions.json').main
 var i = 0
 
 var validHHMMstring = (str) => /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/.test(str);

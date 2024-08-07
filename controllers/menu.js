@@ -7,9 +7,6 @@ const motivation = require('./motivation.js');
 const task = require('./task.js');
 const fetchtask = require('./fetchtask.js');
 
-
-
-
 module.exports = async (msg,bot) => {
     const chatId = msg.chat.id
     const name = db.get(chatId).name
