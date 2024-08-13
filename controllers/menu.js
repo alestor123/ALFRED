@@ -6,6 +6,8 @@ const responses = require('../static/reponses/main.json');
 const motivation = require('./motivation.js');
 const task = require('./task.js');
 const fetchtask = require('./fetchtask.js');
+const events = require('./events.js');
+
 
 module.exports = async (msg,bot) => {
     const chatId = msg.chat.id
@@ -60,7 +62,9 @@ module.exports = async (msg,bot) => {
             case 'currenttask': 
             fetchtask(msg,bot)
             break; 
-               
+            case 'events': 
+            events(msg,bot)
+            break;
                 case 'about': 
             bot.sendMessage(chatId,responses.static.about)
             break;

@@ -1,0 +1,26 @@
+HACKATHONS : 
+<% if(!events.length==0) { %>
+<% for (var i =0; i < events.length;  i++ ) { %>   
+<%= (i+1) %> ) NAME:  <%= events[i].name.toUpperCase() %>  
+   WEBSITE : <%= events[i].website %>
+   START ON : <%= events[i].start.toString().split("T")[0] %>
+   STARTS AT : <%= events[i].start.toString().split("T")[1] %>
+   ENDS ON : <%= events[i].end.toString().split("T")[0] %>
+   ENDING TIME : <%= events[i].end.toString().split("T")[1] %>
+   MODE : <%= events[i].mode.toUpperCase() %>
+
+<% if(events[i].city) { %>
+   
+   ADDRESS : 
+   CITY  : <%= events[i].city %>
+   STATE  : <%= events[i].state %>
+   COUNTRY CODE  : <%= events[i].countryCode %>
+   GOOGLE MAP LOCATION  : <%= events[i].gmaps %>
+   LATITUDE  : <%= events[i].latitude %>
+   LONGITUDE  : <%= events[i].longitude %>
+
+
+<% } %>    
+<% } %>    
+<% } %>
+    

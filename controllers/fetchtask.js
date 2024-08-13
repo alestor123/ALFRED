@@ -26,6 +26,7 @@ bot.sendMessage(
           [{ "text": "IDLE", "callback_data": "fetch_idle" }],
           [{ "text": "CHORES", "callback_data": "fetch_chores" }],
           [{ "text": "GOALS", "callback_data": "fetch_goals" }],
+          [{ "text": "CLASSESS", "callback_data": "fetch_classess" }]
 
         ],
       },
@@ -60,6 +61,9 @@ bot.sendMessage(
                 case 'fetch_goals': 
                 sendMessage(bot,chatId,tasks.filter(e => e.task_type =="goals"))
                 break;
+            case 'fetch_classess': 
+            sendMessage(bot,chatId,tasks.filter(e => e.task_type =="classess"))
+            break; 
             default:
             break
         }

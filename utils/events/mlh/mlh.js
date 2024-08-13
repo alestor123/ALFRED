@@ -9,7 +9,7 @@ module.exports = async () => {
       } catch (error) {
         console.log(error);
       }
-var html = (readFileSync('./download.html').toString())
+// var html = (readFileSync('./download.html').toString())
 var data = await ray('https://mlh.io/seasons/2024/events', '.event', [{title: '.event-link@title',date:'.event-date',url: '.event-link@href'}]).then(res => res) 
 data.forEach(events => {
 events['isMlh']=events.url.includes('mlh.io')
@@ -19,3 +19,4 @@ return eventss
 }
 
 
+// { event_type: 'hackathons', organizer: 'all', mode: 'online' }

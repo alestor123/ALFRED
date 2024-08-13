@@ -119,7 +119,16 @@ END DAY PLANNNER reminder
 
 # SERVER MAINTINNANCE TASKS : 
 RESET MOTIVATION
+EXAM TIME STFU
 REMINDER TO DO DIFF TYPE OF TASKS 
+REMINDER TO DO LEET CODE 
+REMINDER TO DO RESEARCH AND NETWORK
+REMINDER TO DO OSS CONTRIBUTIONS
+REMINDER TO DO MARKETTING
+REMINDER TO DO REVISION
+REMINDER TO DO REVIEW REPORT DURING IDLE TIMES(BATHROOM,LUNCH,DINNER)
+‌workout reminders
+
 
 make a ranking system for sorting on basis of :
 - Add a preferred Time for task (5)
@@ -133,3 +142,67 @@ make a ranking system for sorting on basis of :
 
 # UPDATE DELETE : 
  ADD A DELETE ALL OPTION
+
+#  REPORT :
+DAILY , MONTHLY , YEARLY 
+USER STATS:
+NO OF PRODUCITIVE HOURS :
+LEET CODE STATS :
+LEET CODE PROBLEMS SOLVED TODAY :
+OPEN SOURCE CONTRIBUTIONS 
+NO OF TASKS COMPLETED 
+NO OF TASK REMAINS 
+CLASS ATTENDANCE PERCENTAGE(ARE YOU GOING TO COLLEGE TODAY)
+REVISION OF TODAYS ACTIVITY
+PLAN FOR NEXT DAY
+DEADLINE REMINDER 
+
+# TASK 
+ADD CLASSESS AND MEETINGS
+
+
+# devents
+
+add  https://dev.events/
+https://pvs-studio.com/en/blog/events/
+
+
+# EVENTS TEMPLATE
+BANNER
+STATS
+NAME :
+WEBSITE:
+STARTS AT:
+ENDS AT:
+ORG : MLH || INDEPENDENT
+IS APAC : 
+ADDRESS :
+
+GMAPS LAT&LONG
+
+,
+        {
+            "qn": "When do you want your debreifing in HH:MM format : ",
+            "key": "debreifingTime",
+            "isTime":true
+        },
+        {
+            "qn": "When do you want to show you producitivity stats in HH:MM format : ",
+            "key": "statsTime",
+            "isTime":true
+        },
+        {
+            "qn": "When do you go to college/work in HH:MM format : ",
+            "key": "departureTime",
+            "isTime":true
+        },
+        {
+            "qn": "When do you return from college/work in HH:MM format : ",
+            "key": "arrivalTime",
+            "isTime":true
+        },
+        {
+            "qn": "Which all youtube channels do you prefer to recive you motivation in form of shorts : ",
+            "key": "debreifingTime"
+        },
+        
