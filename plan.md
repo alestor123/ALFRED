@@ -180,6 +180,10 @@ ADDRESS :
 
 GMAPS LAT&LONG
 
+
+## AVAILABLITY
+
+
 ,
         {
             "qn": "When do you want your debreifing in HH:MM format : ",

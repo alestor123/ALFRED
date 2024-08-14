@@ -16,26 +16,18 @@
         "tasks": [
             {
                 "isCompleted": false,
-                "title": "TEST FOR MATRIX",
-                "description": "A SIMPLE AWESOME TEST",
+                "title": "HELLO WORLD",
+                "description": "SOME AWESOME TEXT",
                 "task_type": "main",
-                "time": "12:25",
-                "important": 0,
+                "time": "12:30",
+                "task_date": "1:30",
+                "important": 1,
                 "urgent": 0,
-                "priority": "highest",
-                "stats": "now",
-                "priorityIndex": 3
-            },
-            {
-                "isCompleted": true,
-                "title": "WATCH DEADPOOL",
-                "description": "WATCH DEADPOOL AT LULU MALL",
-                "task_type": "idle",
-                "time": "16:30",
-                "important": "no",
-                "urgent": "no",
-                "stats": "now",
-                "priority": "no"
+                "priority": "yes",
+                "periodicity": "highest",
+                "stats": "delegate",
+                "priorityIndex": -1,
+                "createAT": 1723568854258
             },
             {
                 "isCompleted": false,
@@ -48,61 +40,6 @@
                 "priority": "highest",
                 "stats": "decide",
                 "priorityIndex": 3
-            },
-            {
-                "isCompleted": true,
-                "title": "CONTRIBUTE TO OSS",
-                "description": "OSS IS AWESOME",
-                "task_type": "main",
-                "time": "17:00",
-                "important": 1,
-                "urgent": 1,
-                "priority": "low",
-                "stats": "delete",
-                "priorityIndex": 0
-            },
-            {
-                "isCompleted": false,
-                "title": "UDEMY CLASSESS",
-                "description": "ITS AWESOME CLASS",
-                "task_type": "classess",
-                "time": "10:30",
-                "important": 0,
-                "urgent": 0,
-                "priority": "highest",
-                "periodicity": "today",
-                "stats": "now",
-                "priorityIndex": 3,
-                "createAT": 1723084225566
-            },
-            {
-                "isCompleted": false,
-                "title": "MAKE A LAPTOP STAND , CAMERA",
-                "description": "VVIP",
-                "task_type": "chores",
-                "time": "16:30",
-                "important": 0,
-                "urgent": 0,
-                "priority": "medium",
-                "periodicity": "today",
-                "stats": "now",
-                "priorityIndex": 1,
-                "createAT": 1723122500772
-            },
-            {
-                "isCompleted": false,
-                "title": "BECOME AWESOME",
-                "description": "BCOZ ITS AWESOME",
-                "task_type": "classess",
-                "time": "12-04-2024",
-                "task_date": "23-04-2025",
-                "important": 0,
-                "urgent": 0,
-                "priority": "highest",
-                "periodicity": "today",
-                "stats": "now",
-                "priorityIndex": 3,
-                "createAT": 1723560507190
             }
         ]
     }
