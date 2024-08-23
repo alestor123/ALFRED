@@ -1,11 +1,54 @@
 {
     "static": [
         {
-           "id":"1",
-           "name":"oss", 
-           "periodicity":"daily",
-           "message":"T"
+            "id":1,
+            "name":"workout",
+            "type":"inbuilt", 
+            "active":false,
+            "time":"18:55",
+            "periodicity":"daily",
+            "message":"Hey, champ! 🏋️‍♀️ Don't forget to crush your fitness goals today! 💪🔥 Get moving, get sweating, and get ready to feel amazing! 🏃‍♂️💨"
+        },{
+            "id":2,
+            "name":"leetcode",
+            "type":"inbuilt", 
+            "active":false,
+            "time":"18:55",
+            "periodicity":"daily",
+            "message":"Code red! 🚨💻 Time to tackle LeetCode and boost your skills! 💪🔥"
+        },{
+            "id":3,
+            "name":"workout",
+            "type":"inbuilt", 
+            "active":false,
+            "time":"18:55",
+            "periodicity":"daily",
+            "message":"Hey, champ! 🏋️‍♀️ Don't forget to crush your fitness goals today! 💪🔥 Get moving, get sweating, and get ready to feel amazing! 🏃‍♂️💨"
+        },{
+            "id":4,
+            "name":"plan",
+            "type":"inbuilt", 
+            "active":false,
+            "time":"18:55",
+            "periodicity":"daily",
+            "message":"Tomorrow starts tonight! 🌃💡 Plan ahead and make it count! 📅💪"
+        },{
+            "id":5,
+            "name":"oss",
+            "type":"inbuilt", 
+            "active":false,
+            "time":"19:30",
+            "periodicity":"daily",
+            "message":"🚨 Open Source Alert! 🚨 \n Contribute to open source today and make a difference! 💻💡 \n ✨ Fix a bug \n✨ Add a feature \n✨ Share your knowledge \n  Every contribution counts! 🌈💻"
+},{
+            "id":6,
+            "name":"networking",
+            "type":"inbuilt", 
+            "active":false,
+            "time":"18:55",
+            "periodicity":"daily",
+            "message":"📈 Network & Thrive! 📈 Connect with others and grow! 🤝💻 Tap to learn more! 📚"
         }
-    ]
     
+    ]   
 }

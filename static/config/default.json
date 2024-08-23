@@ -1,11 +1,13 @@
 {
-    "name":"Alestor Aldous",
-    "first_name":"Alestor",
-    "chat_id":"7243429571",
-    "wake_up_time":"",
-    "bed_time":"",
-    "tasks":{
-    "later":[],
-    "now":[]
-    }   
+    "main":{
+        "reminders":[
+            {
+                "id":1,
+                "name":"workout",
+                "active":false,
+                "time":"16:05",
+                "message":"Hey, champ! 🏋️‍♀️ Don't forget to crush your fitness goals today! 💪🔥 Get moving, get sweating, and get ready to feel amazing! 🏃‍♂️💨"
+            }
+        ]
+    }
 }

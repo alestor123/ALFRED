@@ -1,4 +1,5 @@
 var db = require('../schema/db.js')
+const defaultReminders = require('../static/config/reminder.json').static
 var questions = require('../static/config/questions.json').main
 var i = 0
 
@@ -6,7 +7,7 @@ var validHHMMstring = (str) => /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/.test(str);
 
 // make a time out system 
 module.exports = async (msg,bot) => {
-    var userDetails = {};
+    var userDetails = {reminders:defaultReminders};
     askQuestion(questions[0].qn,msg,bot,({text},j) => {
         // if(questions[j].isTime) console.log(validHHMMstring(text))
         userDetails[questions[j].key] = text;

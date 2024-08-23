@@ -9,6 +9,7 @@ const task = require('./controllers/task.js');
 const fetchtask = require('./controllers/fetchtask.js');
 const events = require('./controllers/events.js')
 const availablity = require('./controllers/availablity.js')
+const reminder = require('./controllers/reminder.js')
 
 
 //  utils
@@ -28,7 +29,8 @@ const loggerjs = require('./utils/logging/logs.js')
 module.exports = (token) => {
     const bot = new telegramBot(token, { polling: true });
     // bot.on('message',(msg) => )
-        greetings(bot)
+reminder(bot)
+greetings(bot)
 bot.onText(/\/motivation/, (msg) => motivation(msg,bot));
 bot.onText(/\/availablity/, (msg) => availablity(msg,bot));
 bot.onText(/\/start/, (msg) => menu(msg,bot));

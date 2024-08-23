@@ -110,10 +110,6 @@ IDLE TIME
 CHORES
 PRIORITY
 COMPLETED ,INCOMPLETE
-SET CRON REMINDER 
-add leetcodereminder 
-add hackathons reminder 
-END DAY PLANNNER reminder
 
 
 # SERVER MAINTINNANCE TASKS : 
@@ -127,6 +123,11 @@ REMINDER TO DO MARKETTING
 REMINDER TO DO REVISION
 REMINDER TO DO REVIEW REPORT DURING IDLE TIMES(BATHROOM,LUNCH,DINNER)
 ‌workout reminders
+END DAY PLANNNER reminder
+
+SET CRON REMINDER 
+add leetcodereminder 
+add hackathons reminder 
 
 
 make a ranking system for sorting on basis of :
@@ -218,3 +219,17 @@ how to remove  occupied time
 
 # BUGS :
 - [] JSON READ BUG
+- [] MENU BUG
+- [] PROMPT BUG
+
+
+# fix :
+- [] improve spaggeti code 
+- [] add comments  
+- [] run function on db updattion  
+- [] run function only if specific part is updated
+- []  fix menu problem
+- []  fix menu problem
+
+
+
