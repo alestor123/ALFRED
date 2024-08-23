@@ -4,7 +4,6 @@ implement a cache system
 allow user to set quality of motivation videos
 post the answer on stack overflow and issue
 SHOUT OUT TO THE DUDE WHO MADE THAT API
-IMPLEMENT A MENU
 IMPLEMENT LOGGING SYSTEM
 IMPLEMENT STANDARDS
 IMPLEMENT MOTIVATION AND MOTIVATION LIMIT PER DAY
@@ -182,6 +181,11 @@ GMAPS LAT&LONG
 
 
 ## AVAILABLITY
+get the date ~~~~~~
+and generate one hour one hour slots each from free time
+
+how to remove  occupied time
+- check if start time is between two times of task|| end time ~~~~
 
 
 ,

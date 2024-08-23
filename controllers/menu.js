@@ -7,7 +7,7 @@ const motivation = require('./motivation.js');
 const task = require('./task.js');
 const fetchtask = require('./fetchtask.js');
 const events = require('./events.js');
-
+const availablity = require('./availablity.js')
 
 module.exports = async (msg,bot) => {
     const chatId = msg.chat.id
@@ -59,6 +59,9 @@ module.exports = async (msg,bot) => {
             break; 
             case 'addtask': 
             task(msg,bot)
+            break; 
+            case 'availablity': 
+            availablity(msg,bot)
             break; 
             case 'currenttask': 
             fetchtask(msg,bot)

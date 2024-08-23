@@ -28,13 +28,13 @@
     },
         {
             "qn": "START TIME : ",
-            "key": "time",
-            "type":"starTime"
+            "key": "startTime",
+            "type":"string"
         },
         {
             "qn": "END TIME : ",
-            "key": "time",
-            "type":"endTime"
+            "key": "endTime",
+            "type":"string"
         },
         {
             "qn": "DATE(DD-MM-YY): ",

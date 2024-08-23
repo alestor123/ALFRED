@@ -10,22 +10,22 @@ tasks.forEach(e => {
   {
     case "main":
         
-    if(between(e.time,mainPrefTime.split('-')[0],mainPrefTime.split('-')[1])) sortedTASKS.push(e)
+    if(between(e.endTime,mainPrefTime.split('-')[0],mainPrefTime.split('-')[1])) sortedTASKS.push(e)
     break;
     case "side_hustle":
-    if(between(e.time,hustlePrefTime.split('-')[0],hustlePrefTime.split('-')[1])) sortedTASKS.push(e)
+    if(between(e.endTime,hustlePrefTime.split('-')[0],hustlePrefTime.split('-')[1])) sortedTASKS.push(e)
         
     break;
     case "idle":
-        if(between(e.time,idlePrefTime.split('-')[0],idlePrefTime.split('-')[1])) sortedTASKS.push(e)
+        if(between(e.endTime,idlePrefTime.split('-')[0],idlePrefTime.split('-')[1])) sortedTASKS.push(e)
 
     break;
     case "chores":
-        if(between(e.time,chorePrefTime.split('-')[0],chorePrefTime.split('-')[1])) sortedTASKS.push(e)
+        if(between(e.endTime,chorePrefTime.split('-')[0],chorePrefTime.split('-')[1])) sortedTASKS.push(e)
     
     break;
     case "goals":
-        if(between(e.time,goalPrefTime.split('-')[0],goalPrefTime.split('-')[1])) sortedTASKS.push(e)    
+        if(between(e.endTime,goalPrefTime.split('-')[0],goalPrefTime.split('-')[1])) sortedTASKS.push(e)    
     break;
         default:
             leftOverTASKS.push(e)
