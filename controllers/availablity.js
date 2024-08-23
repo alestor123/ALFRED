@@ -1,3 +1,6 @@
+
+const { readFileSync }  = require('fs')
+const { render } = require('ejs')
 const {resolve} = require('path')
 const dbJSON = require('../static/db/db.json')
 const availablity = require('../utils/timeslots/available.js')
@@ -22,7 +25,12 @@ if((i==questions.length-1)) {
         } )
         const occupiedList =  [...new Set((occupiedTimeSlots))];
         const allotedList = availablity(occupiedList,userDetails,availDetails.hours,availDetails.date)
-        console.log(allotedList)
+try {
+     bot.sendMessage(msg.chat.id, (render(readFileSync(resolve('templates/availability/avail.ejs')).toString(), {allotedList})));
+    }
+    catch(e){
+        console.error(e.message)
+    }
     }
     }) 
 

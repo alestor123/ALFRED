@@ -214,3 +214,7 @@ how to remove  occupied time
             "key": "debreifingTime"
         },
         
+
+
+# BUGS :
+- [] JSON READ BUG

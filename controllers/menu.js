@@ -27,7 +27,7 @@ module.exports = async (msg,bot) => {
             [{ text: 'ADD TASK', callback_data: 'addtask' }],
             [{ text: 'EVENTS', callback_data: 'events' }],
             [{ text: 'AVAILABLITY', callback_data: 'availablity' }],
-            [{ text: 'PROJECTS', callback_data: 'projects' }],
+            [{ text: 'REMINDERS', callback_data: 'reminder' }],
             [{ text: 'SILENCE', callback_data: 'silence' }],
             [{ text: 'MOTIVATION', callback_data: 'motivation' }],
             [{ text: 'EDUCATION', callback_data: 'education' }],

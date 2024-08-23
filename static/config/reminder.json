@@ -1,0 +1,11 @@
+{
+    "static": [
+        {
+           "id":"1",
+           "name":"oss", 
+           "periodicity":"daily",
+           "message":"T"
+        }
+    ]
+    
+}

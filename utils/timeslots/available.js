@@ -21,18 +21,18 @@ for(var i = (wakeHR);i<hrLimit;i+=intDuration) {
     timeSLOTS.push({ startAllot:(((i).toString()+":"+ wakeupTime.split(":")[1])),endAllot:stdAllotment })
 
 }
-var fullSlots = uniqueObjects(timeSLOTS)
+var fullSlots = timeSLOTS;
 var final = fullSlots.filter(({startAllot,endAllot}) => {
     const beforeTime = moment(startAllot, format);
     const afterTime = moment(endAllot, format);
-console.log(beforeTime)
-    var isIncluded;
+    var isIncluded= false;
+    const isIncludedList  = [];   
 occupiedList.forEach(({ end,start }) => {
     const timeStart = moment(start, format);
     const timeEND = moment(end, format);
 // console.log(!(timeStart.isBetween(beforeTime, afterTime) || (timeEND.isBetween(beforeTime, afterTime))))
 // console.log(timeStart)
-if(!(timeStart.isBetween(beforeTime, afterTime) || (timeEND.isBetween(beforeTime, afterTime)))) isIncluded = true;
+ isIncludedList.push(!(timeStart.isBetween(beforeTime, afterTime) || (timeEND.isBetween(beforeTime, afterTime))))
 })
 
 
@@ -45,9 +45,9 @@ if(!(timeStart.isBetween(beforeTime, afterTime) || (timeEND.isBetween(beforeTime
         timeSLOTS.push({ start:(((i).toString()+":"+ wakeupTime.split(":")[1])),end:stdAllotment })
     
 */
-
-return isIncluded;
+return (!isIncludedList.includes(false));
 })
+
 return final;
 
 }
@@ -55,5 +55,13 @@ function addSS(time) {
     return time+":00"
 }
 function uniqueObjects(objs) {
-   return [...(new Map(objs.map(c => [c.start, c]))).values()];  
+    var cleaned = [];
+    objs.forEach(function(itm) {
+        var unique = true;
+        cleaned.forEach(function(itm2) {
+            if (_.isEqual(itm, itm2)) unique = false;
+        });
+        if (unique)  cleaned.push(itm);
+    });
+    return cleaned;
 }

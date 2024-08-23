@@ -1,1 +1,8 @@
-TIME SLOTS AVAILABLE : 
+<% if(!allotedList.length==0) { %>
+    TIME SLOTS AVAILABLE : 
+    <% for (var i =0; i < allotedList.length;  i++ ) { %>   
+    <%= (i+1) %> ) <%= allotedList[i].startAllot %> - <%= allotedList[i].endAllot %>
+       <% } %>    
+       <% } %>
+      
+    

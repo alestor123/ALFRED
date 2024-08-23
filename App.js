@@ -13,7 +13,7 @@ const availablity = require('./controllers/availablity.js')
 
 //  utils
 const loggerjs = require('./utils/logging/logs.js')
-loggerjs.set({fsLog:true,fileName:'./static/logs/bot.log'})
+// loggerjs.set({fsLog:true,fileName:'./static/logs/bot.log'})
 
 
 
