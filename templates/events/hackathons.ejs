@@ -1,26 +1,32 @@
-HACKATHONS : 
+🏆 *UPCOMING HACKATHONS* 🏆
+━━━━━━━━━━━━━━━━━━━━━━
+
 <% if(!events.length==0) { %>
 <% for (var i =0; i < events.length;  i++ ) { %>   
-<%= (i+1) %> ) NAME:  <%= events[i].name.toUpperCase() %>  
-   WEBSITE : <%= events[i].website %>
-   START ON : <%= events[i].start.toString().split("T")[0] %>
-   STARTS AT : <%= events[i].start.toString().split("T")[1] %>
-   ENDS ON : <%= events[i].end.toString().split("T")[0] %>
-   ENDING TIME : <%= events[i].end.toString().split("T")[1] %>
-   MODE : <%= events[i].mode.toUpperCase() %>
+📌 *<%= events[i].name.toUpperCase() %>*
+
+🔗 *Website:* <%= events[i].website %>
+
+⏰ *Timing:*
+• Start: <%= events[i].start.toString().split("T")[0] %> at <%= events[i].start.toString().split("T")[1] %>
+• End: <%= events[i].end.toString().split("T")[0] %> at <%= events[i].end.toString().split("T")[1] %>
+
+🎯 *Mode:* <%= events[i].mode.toUpperCase() %>
 
 <% if(events[i].city) { %>
-   
-   ADDRESS : 
-   CITY  : <%= events[i].city %>
-   STATE  : <%= events[i].state %>
-   COUNTRY CODE  : <%= events[i].countryCode %>
-   GOOGLE MAP LOCATION  : <%= events[i].gmaps %>
-   LATITUDE  : <%= events[i].latitude %>
-   LONGITUDE  : <%= events[i].longitude %>
+📍 *Location Details:*
+• City: <%= events[i].city %>
+• State: <%= events[i].state %>
+• Country: <%= events[i].countryCode %>
 
+🗺️ *Map:*
+• Google Maps: <%= events[i].gmaps %>
+• Coordinates: <%= events[i].latitude %>, <%= events[i].longitude %>
+<% } %>    
 
+━━━━━━━━━━━━━━━━━━━━━━
 <% } %>    
-<% } %>    
+<% } else { %>
+😔 *No upcoming hackathons found.*
 <% } %>
     

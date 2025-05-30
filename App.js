@@ -17,6 +17,8 @@ const prompt = require('./controllers/prompt');
 const fetchtask = require('./controllers/fetchtask');
 const menu = require('./controllers/menu');
 const responses = require('./controllers/responses');
+const { startStudyMenu, handleStudyCallback } = require('./controllers/studyController.js');
+const { handleDailyReport } = require('./controllers/dayreport.js');
 
 module.exports = (token) => {
     if (!token) {
@@ -43,6 +45,8 @@ module.exports = (token) => {
                 // Handle commands and messages
                 if (messageText === '/start' || messageText === '/menu') {
                     await menu(msg, bot);
+                } else if (messageText === '/study') {
+                    await startStudyMenu(msg, bot);
                 } else if (messageText === '/updates') {
                     await updates(msg, bot);
                 } else if (messageText === '/leetcode') {
@@ -59,11 +63,13 @@ module.exports = (token) => {
                     await availability(msg, bot);
                 } else if (messageText === '/register') {
                     await register(msg, bot);
+                } else if (messageText === '/report') {
+                    await handleDailyReport(msg, bot);
                 } else {
                     await responses(msg, bot);
                 }
             } catch (error) {
-                logger.error(`Error in message handler: ${error.message}`);
+                logger.error(`Error in message handler: ${error.message} (ChatID: ${msg.chat.id})`);
                 try {
                     await bot.sendMessage(msg.chat.id, '❌ An error occurred while processing your message.');
                 } catch (sendError) {
@@ -78,7 +84,9 @@ module.exports = (token) => {
                 const action = callbackQuery.data;
                 const msg = callbackQuery.message;
                 
-                if (action.startsWith('task_')) {
+                if (action.startsWith('study_')) {
+                    await handleStudyCallback(callbackQuery, bot);
+                } else if (action.startsWith('task_')) {
                     await fetchtask(callbackQuery, bot);
                 } else if (action.startsWith('prompt_')) {
                     await prompt(callbackQuery, bot);
@@ -91,10 +99,19 @@ module.exports = (token) => {
                     };
                     await updates(refreshMsg, bot);
                 } else if (action === 'menu') {
-                    await menu({ chat: { id: msg.chat.id } }, bot);
+                    await menu({ chat: { id: msg.chat.id }, message_id: msg.message_id }, bot);
+                } else {
+                    // Fallback to main menu listener if no other handler caught it.
+                    // This assumes the main menu sets up a general callback listener.
+                    // To avoid conflicts, it might be better if menu.js handles its own callbacks
+                    // or App.js explicitly calls menu's callback handler.
+                    // For now, let main menu's listener (if any active from its last call) try to handle it.
+                    // This part can be tricky if multiple controllers listen to general 'callback_query'.
+                    // A more robust system would have App.js explicitly call the relevant controller's callback handler
+                    // or ensure only one specific callback listener is active at a time per chat.
                 }
             } catch (error) {
-                logger.error(`Error in callback query handler: ${error.message}`);
+                logger.error(`Error in callback_query handler: ${error.message} (ChatID: ${callbackQuery.message.chat.id})`);
                 try {
                     await bot.sendMessage(callbackQuery.message.chat.id, '❌ An error occurred while processing your request.');
                 } catch (sendError) {

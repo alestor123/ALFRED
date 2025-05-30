@@ -1,21 +1,25 @@
-USER STATS : 
-USERNAME : <%= username %>
-NAME : <%= name %>
-RANK : <%= ranking %>
-REPUTATION : <%= reputation %>
+🎯 *LEETCODE PROFILE STATS* 🎯
+━━━━━━━━━━━━━━━━━━━━━━
 
-PROBLEMS SOLVED : 
+👤 *User Information*
+• Username: <%= username %>
+• Name: <%= name %>
+• Rank: <%= ranking %>
+• Reputation: <%= reputation %>
 
-TOTAL PROBLEMS SOLVED : <%= stats.solvedProblem %>
-EASY SOLVED : <%= stats.easySolved %>
-MEDIUM : <%= stats.mediumSolved %>
-HARD : <%= stats.hardSolved %>
-NO OF PROBLEMS SOLVED TODAY : <%= submissions.countToday %>
+📊 *Problem Solving Stats*
+• Total Problems Solved: <%= stats.solvedProblem %>
+• Easy Problems: <%= stats.easySolved %>
+• Medium Problems: <%= stats.mediumSolved %>
+• Hard Problems: <%= stats.hardSolved %>
+
+📅 *Today's Progress*
+• Problems Solved Today: <%= submissions.countToday %>
 <% if(!submissions.problemsSolvedToday.length==0) { %>
+• Problems Solved:
 <% for (var i =0; i < submissions.problemsSolvedToday.length;  i++ ) { %>
-
-PROBLEMS SOLVED TODAY : 
-=> <%= submissions.problemsSolvedToday[i].title %> 
-<% } %>    
-PROBLEMS SOLVED REVISION: 
+  ➜ <%= submissions.problemsSolvedToday[i].title %>
 <% } %>
+<% } %>
+
+━━━━━━━━━━━━━━━━━━━━━━

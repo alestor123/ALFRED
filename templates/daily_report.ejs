@@ -1,0 +1,41 @@
+📊 *DAILY REPORT* 📊
+━━━━━━━━━━━━━━━━━━━━━━
+
+👤 *User Information*
+• Name: <%= name %>
+• Date: <%= date %>
+
+📚 *LeetCode Progress*
+• Problems Solved: <%= leetcodeCount %>
+<% if (leetcodeProblems && leetcodeProblems.length > 0) { %>
+• Today's Problems:
+<% leetcodeProblems.forEach(function(problem) { %>
+  - <%= problem.title %> (<%= problem.difficulty %>)
+<% }); %>
+<% } %>
+
+✅ *Tasks Progress*
+• Total Tasks Today: <%= totalTasks %>
+• Completed Tasks: <%= taskCount %>
+• Completion Rate: <%= completionRate %>%
+<% if (completedTasks && completedTasks.length > 0) { %>
+• Completed Tasks:
+<% completedTasks.forEach(function(task) { %>
+  - <%= task.title %> (<%= task.task_type %>)
+  <% if (task.description) { %>  📝 <%= task.description %><% } %>
+<% }); %>
+<% } %>
+
+⏰ *Time Management*
+<% if (completedTasks && completedTasks.length > 0) { %>
+• First Task: <%= completedTasks[0].startTime %>
+• Last Task: <%= completedTasks[completedTasks.length - 1].endTime %>
+<% } %>
+
+📈 *Performance Summary*
+• LeetCode Streak: <%= leetcodeStreak %> days
+
+💭 *End of Day Message*
+<%= endOfDayMessage %>
+
+━━━━━━━━━━━━━━━━━━━━━━ 

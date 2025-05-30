@@ -22,6 +22,10 @@ module.exports = async (msg,bot) => {
         eventDetails[questions[j].key] = text;
         if((i==questions.length-1)) {
         const events =  (await all(eventDetails))
+        if (!Array.isArray(events) || events.length === 0) {
+            bot.sendMessage(chatID, "❌ Sorry, no events found for your selection. Please try again later or try a different filter.");
+            return;
+        }
         console.log(events[0])
         bot.sendMessage(chatID,(render(readFileSync(resolve('templates/events/hackathons.ejs')).toString(), {events})))
            }

@@ -1,0 +1,22 @@
+{
+  "excellent": [
+    "🌟 Outstanding work today! You've crushed your goals and set a new standard for excellence.",
+    "🎯 Perfect execution! Your dedication and focus today were truly inspiring.",
+    "💫 You're on fire! Today's performance shows what you're truly capable of."
+  ],
+  "good": [
+    "👍 Great job today! You've made solid progress on your goals.",
+    "📈 Nice work! You're building momentum and moving forward.",
+    "✨ Well done! Your consistent effort is paying off."
+  ],
+  "average": [
+    "📊 Decent progress today. Every step forward counts!",
+    "🌱 You're making steady progress. Keep pushing forward!",
+    "💪 Good effort today. Tomorrow is another opportunity to excel."
+  ],
+  "needs_improvement": [
+    "🌅 Tomorrow is a new day with new opportunities to shine.",
+    "🎯 Let's set some clear goals for tomorrow to make it more productive.",
+    "💫 Every day is a chance to improve. You've got this!"
+  ]
+} 

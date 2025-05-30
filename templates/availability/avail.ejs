@@ -1,10 +1,15 @@
+⏰ *AVAILABLE TIME SLOTS* ⏰
+━━━━━━━━━━━━━━━━━━━━━━
+
 <% if(!allotedList.length==0) { %>
-✅ TIME SLOTS AVAILABLE : 
-    <% for (var i =0; i < allotedList.length;  i++ ) { %>   
-    <%= (i+1) %> ) ⏰ <%= allotedList[i].startAllot %> - <%= allotedList[i].endAllot %>
-       <% } %>    
+✅ *Available Slots:*
+<% for (var i =0; i < allotedList.length;  i++ ) { %>   
+• Slot <%= (i+1) %>: <%= allotedList[i].startAllot %> - <%= allotedList[i].endAllot %>
+<% } %>    
 <% } else { %>
-❌ No time slots available for the selected criteria.
+❌ *No time slots available for the selected criteria.*
 <% } %>
+
+━━━━━━━━━━━━━━━━━━━━━━
       
     

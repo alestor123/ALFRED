@@ -9,6 +9,8 @@ const task = require('./task.js');
 const fetchtask = require('./fetchtask.js');
 const events = require('./events.js');
 const availability = require('./availability.js');
+const { startStudyMenu } = require('./studyController.js');
+const { handleDailyReport } = require('./dayreport.js');
 
 module.exports = async (msg, bot) => {
     try {
@@ -24,8 +26,8 @@ module.exports = async (msg, bot) => {
             return;
         }
 
-        // Remove any existing callback query listeners
-        bot.removeListener("callback_query");
+        // Remove any existing callback query listeners to prevent multiple handlers for the same menu
+        bot.removeAllListeners("callback_query");
 
         // Send menu message
         await bot.sendMessage(
@@ -37,6 +39,7 @@ module.exports = async (msg, bot) => {
                         [{ text: '📝 REGISTER', callback_data: 'register' }],
                         [{ text: '👤 PROFILE', callback_data: 'profile' }],
                         [{ text: '💻 LEETCODE STATUS', callback_data: 'leetcode' }],
+                        [{ text: '📚 STUDY MATERIALS', callback_data: 'study_materials' }],
                         [{ text: '📊 DAILY REPORT', callback_data: 'dailyreport' }],
                         [{ text: '📅 TODAYS TASK', callback_data: 'currenttask' }],
                         [{ text: '➕ ADD TASK', callback_data: 'addtask' }],
@@ -58,7 +61,7 @@ module.exports = async (msg, bot) => {
         bot.on('callback_query', async (callbackQuery) => {
             try {
                 const action = callbackQuery.data;
-                const msg = callbackQuery.message;
+                const current_msg = callbackQuery.message;
 
                 switch (action) {
                     case 'register':
@@ -66,43 +69,39 @@ module.exports = async (msg, bot) => {
                             chatId,
                             "Thanks for joining, Master! I'm here to help you stay productive and achieve your goals. Please send your answers as replies to the following questions."
                         );
-                        await prompt(msg, bot);
+                        await prompt(current_msg, bot);
                         break;
-
+                    case 'study_materials':
+                        await startStudyMenu(current_msg, bot);
+                        break;
                     case 'leetcode':
-                        await leetcode(msg, bot);
+                        await leetcode(current_msg, bot);
                         break;
-
-                    case 'profile':
-                        await profile(msg, bot);
-                        break;
-
-                    case 'motivation':
-                        await motivation(msg, bot);
-                        break;
-
-                    case 'addtask':
-                        await task(msg, bot);
-                        break;
-
+                    case 'profile': 
+                        await profile(current_msg, bot);
+                        break; 
+                    case 'motivation': 
+                        await motivation(current_msg, bot);
+                        break; 
+                    case 'addtask': 
+                        await task(current_msg, bot);
+                        break; 
                     case 'availability':
-                        await availability(msg, bot);
+                        await availability(current_msg, bot);
+                        break; 
+                    case 'currenttask': 
+                        await fetchtask(current_msg, bot);
+                        break; 
+                    case 'events': 
+                        await events(current_msg, bot);
                         break;
-
-                    case 'currenttask':
-                        await fetchtask(msg, bot);
+                    case 'dailyreport':
+                        await handleDailyReport(current_msg, bot);
                         break;
-
-                    case 'events':
-                        await events(msg, bot);
-                        break;
-
-                    case 'about':
+                    case 'about': 
                         await bot.sendMessage(chatId, responses.static.about);
                         break;
-
-                    case 'mute':
-                        // Toggle mute status
+                    case 'mute': 
                         const isSilenced = !user.settings?.isSilenced;
                         await User.findOneAndUpdate(
                             { chatId },
@@ -113,12 +112,8 @@ module.exports = async (msg, bot) => {
                             `🔔 Notifications ${isSilenced ? 'muted' : 'unmuted'}`
                         );
                         break;
-
                     case 'updates':
-                        await updates(msg, bot);
-                        break;
-
-                    default:
+                        await updates(current_msg, bot);
                         break;
                 }
             } catch (error) {
