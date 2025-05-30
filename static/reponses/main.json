@@ -1,10 +1,10 @@
 {
     "static":{
-    "hello":"Good day, Master. I'm Alfred, your trusted butler and productivity assistant. How may I help you today?",
-    "hi":"Hello master",
-    "ping":"pong",
-    "about":"Alfred Pennyworth can tailor its support to meet your unique needs and preferences, helping you achieve academic success and become a top-notch Computer Science student!",
-    "404":"Command not recognized, sir."    
+    "hello":"👋 Good day, Master. I'm Alfred, your trusted butler and productivity assistant. How may I help you today?",
+    "hi":"👋 Hello master",
+    "ping":"🏓 pong",
+    "about":"Alfred Pennyworth can tailor its support to meet your unique needs and preferences, helping you achieve academic success and become a top-notch Computer Science student! 🎓🚀",
+    "404":"❓ Command not recognized, sir."    
 },
 "dynamic":["leetcode","motivation"]
 

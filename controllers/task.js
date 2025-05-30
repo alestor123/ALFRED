@@ -29,7 +29,7 @@ currentTaskArray.push(taskDetails)
 currentUserData.tasks = currentTaskArray
 db.set(msg.chat.id,currentUserData)
     }
-        bot.sendMessage(msg.chat.id, `SUCESSFULLY ADDED TASK ! `);
+        bot.sendMessage(msg.chat.id, `✅ SUCCESSFULLY ADDED TASK ! `);
         }
         }) 
     

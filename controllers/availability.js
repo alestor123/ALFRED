@@ -1,4 +1,3 @@
-
 const { readFileSync }  = require('fs')
 const { render } = require('ejs')
 const {resolve} = require('path')
@@ -15,7 +14,7 @@ askQuestion(questions[0].qn,msg,bot,({text},j) => {
     availDetails[questions[j].key] = text;
 if((i==questions.length-1)) {
     const  userDetails = dbJSON[chatID];
-     bot.sendMessage(msg.chat.id, `Checking the schedule ....`);
+     bot.sendMessage(msg.chat.id, `⏳ Checking the schedule ....`);
         const occupiedTimeSlots = userDetails.tasks.filter(task => (compareDates(task.task_date)>=compareDates(todaysDate()))).map(task =>  { 
             return {
                 start:task.startTime , 

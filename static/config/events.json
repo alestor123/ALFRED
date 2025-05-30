@@ -2,58 +2,58 @@
     "main": [
     
         {
-            "qn": "TYPE OF EVENTS : ",
+            "qn": "🎉 TYPE OF EVENTS : ",
             "key": "event_type",
             "type":"option",
             "option_reply":["main","side_hustle","idle","chores"],
                 "inline_keyboard": [
-                  [{ "text": "ALL", "callback_data": "all" }],
-                  [{ "text": "HACKATHONS", "callback_data": "hackathons" }],
-                  [{ "text": "CONFERENCES", "callback_data": "conferences" }],
-                  [{ "text": "WEBINAR", "callback_data": "webinar" }],
-                  [{ "text": "FESTIVALS", "callback_data": "festivals" }],
-                  [{ "text": "MEETUPS", "callback_data": "meetups" }],
-                  [{ "text": "TRAINING", "callback_data": "training" }],
-                  [{ "text": "SUMMIT", "callback_data": "summit" }]
+                  [{ "text": "🌐 ALL", "callback_data": "all" }],
+                  [{ "text": "💻 HACKATHONS", "callback_data": "hackathons" }],
+                  [{ "text": "🗣️ CONFERENCES", "callback_data": "conferences" }],
+                  [{ "text": "📹 WEBINAR", "callback_data": "webinar" }],
+                  [{ "text": "🎊 FESTIVALS", "callback_data": "festivals" }],
+                  [{ "text": "🤝 MEETUPS", "callback_data": "meetups" }],
+                  [{ "text": "🎓 TRAINING", "callback_data": "training" }],
+                  [{ "text": "⛰️ SUMMIT", "callback_data": "summit" }]
                   
                 ]
         
     },
     {
-        "qn": "TIME : ",
+        "qn": "⏰ TIME : ",
         "key": "event_time",
         "type":"option",
         "option_reply":["today","week","month","year"],
             "inline_keyboard": [
-              [{ "text": "TODAY", "callback_data": "all" }],
-              [{ "text": "WEEK", "callback_data": "hackathons" }],
-              [{ "text": "MONTH", "callback_data": "conferences" }],
-              [{ "text": "YEAR", "callback_data": "webinar" }]
+              [{ "text": "📅 TODAY", "callback_data": "all" }],
+              [{ "text": "🗓️ WEEK", "callback_data": "hackathons" }],
+              [{ "text": "📆 MONTH", "callback_data": "conferences" }],
+              [{ "text": "🎆 YEAR", "callback_data": "webinar" }]
             ]
     
 },
     {
-        "qn": "ORGANIZERS : ",
+        "qn": "🏢 ORGANIZERS : ",
         "key": "organizer",
         "type":"option",
         "option_reply":["all","mlh","hackclub"],
             "inline_keyboard": [
-              [{ "text": "ALL", "callback_data": "all" }],
-              [{ "text": "MLH", "callback_data": "mlh" }],
-              [{ "text": "HACKCLUB", "callback_data": "hackclub" }]        
+              [{ "text": "🌐 ALL", "callback_data": "all" }],
+              [{ "text": "Ⓜ️ MLH", "callback_data": "mlh" }],
+              [{ "text": "#️⃣ HACKCLUB", "callback_data": "hackclub" }]        
             ]
     
 },
 {
-    "qn": "MODE OF EVENT : ",
+    "qn": "📍 MODE OF EVENT : ",
     "key": "mode",
     "type":"option",
     "option_reply":["online","hybrid","offline"],
         "inline_keyboard": [
-          [{ "text": "ALL", "callback_data": "all" }],
-          [{ "text": "ONLINE", "callback_data": "online" }],
-          [{ "text": "HYBRID", "callback_data": "hybrid" }],
-          [{ "text": "OFFLINE", "callback_data": "offline" }]
+          [{ "text": "🌐 ALL", "callback_data": "all" }],
+          [{ "text": "💻 ONLINE", "callback_data": "online" }],
+          [{ "text": "🏢 HYBRID", "callback_data": "hybrid" }],
+          [{ "text": "🚶 OFFLINE", "callback_data": "offline" }]
           
         ]
 

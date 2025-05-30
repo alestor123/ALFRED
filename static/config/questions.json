@@ -1,60 +1,60 @@
 {
     "main": [
         {
-            "qn": "What is your full name : ",
+            "qn": "📝 What is your full name : ",
             "key": "fullname",
             "type":"string"
         },
         {
-            "qn": "What is your first name : ",
+            "qn": "📛 What is your first name : ",
             "key": "name",
             "type":"string"
         },
         {
-            "qn": "What is your leetcode username : ",
+            "qn": "💻 What is your leetcode username : ",
             "key": "leetcode",
             "type":"string"
         },
         {
-            "qn": "When do you wake up in HH:MM format :  ",
+            "qn": "⏰ When do you wake up in HH:MM format :  ",
             "key": "wakeupTime",
             "type":"time"
         },
         {
-            "qn": "When do you go to sleep in HH:MM format() : ",
+            "qn": "🛌 When do you go to sleep in HH:MM format() : ",
             "key": "bedTime",
             "type":"time"
         },
         {
-            "qn": "Enter the youtube playlist ID from which you are going to recive motivation videos : ",
+            "qn": "📺 Enter the youtube playlist ID from which you are going to receive motivation videos : ",
             "key": "motivationChannelID",
             "type":"string"
         },
         {
-            "qn": "Set motivation limit : ",
+            "qn": "🎯 Set motivation limit : ",
             "key": "motivationLimit"
         },
         {
-            "qn": "Preferred time to do main task format (HH:MM-HH:MM): ",
+            "qn": "🕒 Preferred time to do main task format (HH:MM-HH:MM): ",
             "key": "mainPrefTime"
         },
         {
-            "qn": "Preferred time to do side hustle related task format (HH:MM-HH:MM): ",
+            "qn": "🕒 Preferred time to do side hustle related task format (HH:MM-HH:MM): ",
             "key": "hustlePrefTime"
         },
         {
-            "qn": "Preferred time to do tasks related to chores format (HH:MM-HH:MM): ",
+            "qn": "🕒 Preferred time to do tasks related to chores format (HH:MM-HH:MM): ",
             "key": "chorePrefTime"
         },
         {
-            "qn": "Preferred time to do task related to your long term goals format (HH:MM-HH:MM): ",
+            "qn": "🕒 Preferred time to do task related to your long term goals format (HH:MM-HH:MM): ",
             "key": "goalPrefTime"
         },
         {
-            "qn": "Preferred time to do idle task format (HH:MM-HH:MM): ",
+            "qn": "🕒 Preferred time to do idle task format (HH:MM-HH:MM): ",
             "key": "idlePrefTime"
         }
     ],
-    "goodMorning":"Good morning! A new day brings new opportunities. Stay focused, stay productive. 🚀",
-    "goodNight":"Nighty night!  Review your tasks, plan for tomorrow, Reflect on your accomplishments and recharge for another productive day. Sweet dreams!💫"
+    "goodMorning":"🌅 Good morning! A new day brings new opportunities. Stay focused, stay productive. 🚀",
+    "goodNight":"🌃 Nighty night!  Review your tasks, plan for tomorrow, Reflect on your accomplishments and recharge for another productive day. Sweet dreams!💫"
 }

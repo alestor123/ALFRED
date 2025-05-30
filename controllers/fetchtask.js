@@ -14,19 +14,19 @@ const tasks = rank(userDATA)
 
 bot.sendMessage(
     chatId,
-    "FETCH TASKS :",
+    "📋 FETCH TASKS :",
     {
       reply_markup: {
         inline_keyboard: [
-          [{ text: 'ALL', callback_data: 'all' }],
-          [{ text: 'COMPLETED', callback_data: 'fetch_completed' }],
-          [{ text: 'INCOMPLETE', callback_data: 'fetch_incomplete' }],
-          [{ text: 'MAIN', callback_data: 'fetch_main' }],
-          [{ text: 'SIDE HUSTLE', callback_data: 'fetch_side_hustle' }],
-          [{ "text": "IDLE", "callback_data": "fetch_idle" }],
-          [{ "text": "CHORES", "callback_data": "fetch_chores" }],
-          [{ "text": "GOALS", "callback_data": "fetch_goals" }],
-          [{ "text": "CLASSESS", "callback_data": "fetch_classess" }]
+          [{ text: '🌐 ALL', callback_data: 'all' }],
+          [{ text: '✅ COMPLETED', callback_data: 'fetch_completed' }],
+          [{ text: '⏳ INCOMPLETE', callback_data: 'fetch_incomplete' }],
+          [{ text: '🎯 MAIN', callback_data: 'fetch_main' }],
+          [{ text: '💼 SIDE HUSTLE', callback_data: 'fetch_side_hustle' }],
+          [{ "text": "🛋️ IDLE", "callback_data": "fetch_idle" }],
+          [{ "text": "🧹 CHORES", "callback_data": "fetch_chores" }],
+          [{ "text": "🌟 GOALS", "callback_data": "fetch_goals" }],
+          [{ "text": "📚 CLASSES", "callback_data": "fetch_classess" }]
 
         ],
       },
@@ -83,7 +83,7 @@ await bot.onReplyToMessage(chatID, msgPrompt.message_id, (msg_obj) => {
     console.log("delete command")
     arr.forEach(e => {
     tasks.splice(((Number(e)-1)),1)
-    bot.sendMessage(chatID,`TASK NO ${e} HAS BEEN DELETED !!`)
+    bot.sendMessage(chatID,`🗑️ TASK NO ${e} HAS BEEN DELETED !!`)
     })
     userDATA.tasks= (tasks)
     db.set(chatID,userDATA)
@@ -94,7 +94,7 @@ await bot.onReplyToMessage(chatID, msgPrompt.message_id, (msg_obj) => {
       tasks[((Number(e)-1))].isCompleted = !tasks[((Number(e)-1))].isCompleted
       userDATA.tasks = tasks;
       db.set(chatID,userDATA)
-      bot.sendMessage(chatID,`TASK NO ${e} HAS BEEN MARKED ${ tasks[((Number(e)-1))].isCompleted ? "COMPLETED" : "INCOMPLETE" } !!`)
+      bot.sendMessage(chatID,`✏️ TASK NO ${e} HAS BEEN MARKED ${ tasks[((Number(e)-1))].isCompleted ? "✅ COMPLETED" : "⏳ INCOMPLETE" } !!`)
     })
   }
   })

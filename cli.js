@@ -2,4 +2,4 @@
 
 var bot = require('./App');
 require('dotenv').config()
-bot(process.env.TOKEN)
+bot(process.env.BOT_TOKEN)

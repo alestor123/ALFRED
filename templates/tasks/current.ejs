@@ -1,17 +1,19 @@
-TODAY'S TASKS : 
+🗓️ TODAY'S TASKS : 
 <% if(!tasks.length==0) { %>
 <% for (var i =0; i < tasks.length;  i++ ) { %>   
 <%= (i+1) %> ) <%= tasks[i].title %> 
-DESCRIPTION : <%= tasks[i].description %>
-TYPE : <%= tasks[i].task_type.toUpperCase() %>
-STATUS : <%= (tasks[i].isCompleted ? "COMPLETED" : "INCOMPLETE") %>
+📝 DESCRIPTION : <%= tasks[i].description %>
+🏷️ TYPE : <%= tasks[i].task_type.toUpperCase() %>
+📊 STATUS : <%= (tasks[i].isCompleted ? "✅ COMPLETED" : "⏳ INCOMPLETE") %>
 PRIORITY : <%= (tasks[i].priority.toUpperCase()) %>
-ADVICE : <%= (tasks[i].stats.toUpperCase()) %>
-DATE : <%= (tasks[i].task_date) %>
-FROM : <%= (tasks[i].startTime) %>
-DUE : <%= (tasks[i].endTime) %>
+💡 ADVICE : <%= (tasks[i].stats.toUpperCase()) %>
+📅 DATE : <%= (tasks[i].task_date) %>
+⏰ FROM : <%= (tasks[i].startTime) %>
+⏱️ DUE : <%= (tasks[i].endTime) %>
 
 
 <% } %>    
+<% } else { %>
+🎉 No tasks for today! Enjoy your free time or add some new ones! 
 <% } %>
     

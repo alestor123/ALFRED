@@ -12,7 +12,7 @@ module.exports = async (msg,bot) => {
         // if(questions[j].isTime) console.log(validHHMMstring(text))
         userDetails[questions[j].key] = text;
     if((i==questions.length-1)) {
-         bot.sendMessage(msg.chat.id, `Welome master ${userDetails["name"]} `);
+         bot.sendMessage(msg.chat.id, `🎉 Welcome, Master ${userDetails["name"]}! Your details have been saved. `);
          db.set(msg.chat.id,userDetails)
         }
         }) 

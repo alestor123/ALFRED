@@ -1,11 +1,11 @@
 {
     "main": [
      {
-            "qn": "Duration of slots in hours : ",
+            "qn": "⏱️ Duration of slots in hours : ",
             "key": "hours"
         },
         {
-            "qn": "Preferred date (DD-MM-YYYY): ",
+            "qn": "📅 Preferred date (DD-MM-YYYY): ",
             "key": "date"
         }
     ]

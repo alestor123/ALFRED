@@ -1,0 +1,147 @@
+{
+  "branches": {
+    "CSE": {
+      "schemes": {
+        "2015": {
+          "semesters": {
+            "S1": {
+              "subjects": {
+                "Engineering Mathematics": {
+                  "ktunotes": "https://www.ktunotes.in/ktu-2015-scheme-notes/",
+                  "ktuspecial": null
+                },
+                "Basics of Civil & Mechanical Engineering": {
+                  "ktunotes": "https://www.ktunotes.in/ktu-2015-scheme-notes/",
+                  "ktuspecial": null
+                }
+              }
+            },
+            "S3": {
+              "subjects": {
+                "Discrete Mathematical Structures": {
+                  "ktunotes": "https://www.ktunotes.in/s3-discrete-maths-notes",
+                  "ktuspecial": null
+                }
+              }
+            },
+            "S4": {
+              "subjects": {
+                "Graph Theory & Combinatorics": {
+                  "ktunotes": "https://www.ktunotes.in/s4-mathematics-notes",
+                  "ktuspecial": null
+                }
+              }
+            }
+          }
+        },
+        "2019": {
+          "semesters": {
+            "S1": {
+              "subjects": {
+                "Linear Algebra & Calculus": {
+                  "ktunotes": "https://www.ktunotes.in/ktu-2019-new-scheme-notes/",
+                  "ktuspecial": null
+                }
+              }
+            },
+            "S4": {
+              "subjects": {
+                "MAT 206 Graph Theory": {
+                  "ktunotes": "https://www.keralanotes.com/2021/10/KTU-S4-CSE-Notes-New-Scheme.html",
+                  "ktuspecial": null
+                },
+                "CST 202 Computer Organization & Architecture": {
+                  "ktunotes": "https://www.keralanotes.com/2021/10/KTU-S4-CSE-Notes-New-Scheme.html",
+                  "ktuspecial": null
+                },
+                "CST 204 Database Management Systems": {
+                  "ktunotes": "https://www.keralanotes.com/2021/10/KTU-S4-CSE-Notes-New-Scheme.html",
+                  "ktuspecial": null
+                }
+              }
+            },
+            "S7": {
+              "subjects": {
+                "Web Programming (CST463)": {
+                  "ktunotes": "https://www.keralanotes.com/p/ktu-study-materials.html",
+                  "ktuspecial": null
+                }
+              }
+            }
+          }
+        },
+        "2024": {
+          "semesters": {
+            "S1": {
+              "subjects": {
+                "Foundations of Computing (FOC)": {
+                  "ktunotes": "https://www.ktunotes.in/2024-scheme/",
+                  "ktuspecial": "https://ktuspecial.in/ktu-btech-2024-scheme-notes/"
+                },
+                "Programming in C": {
+                  "ktunotes": "https://www.ktunotes.in/2024-scheme/",
+                  "ktuspecial": "https://ktuspecial.in/ktu-btech-2024-scheme-notes/"
+                },
+                "Chemistry of Information & Electrical Science (GXCYT122)": {
+                  "ktunotes": null,
+                  "ktuspecial": "https://ktuspecial.in/ktu-btech-gxcyt122-s1-2024scheme-ktunotes-notes/"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "EEE": {
+      "schemes": {
+        "2024": {
+          "semesters": {
+            "S2": {
+              "subjects": {
+                "Measurements & Instrumentation (PCEET205)": {
+                  "ktunotes": null,
+                  "ktuspecial": "https://ktuspecial.in/mi2024scheme-pceet205notes-program-core1-eee/"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Common": {
+      "schemes": {
+        "2019": {
+          "semesters": {
+            "S5": {
+              "subjects": {
+                "Engineering Entrepreneurship & IPR (UCEST206)": {
+                  "ktunotes": null,
+                  "ktuspecial": "https://ktuspecial.in/category/ktu-2024/"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "metadata": {
+    "sources": {
+      "ktunotes.in": {
+        "schemes": [2015, 2019, 2024],
+        "coverage": "CSE (S1-S7), ECE, ME, CE - Extensive but branch-specific"
+      },
+      "ktuspecial.in": {
+        "schemes": [2024],
+        "coverage": "2024 Scheme: CSE S1 Chemistry, EEE S2 Measurements; 2019: Entrepreneurship",
+        "url_pattern": "Subject-specific (e.g., /mi2024scheme-pceet205notes-)"
+      }
+    },
+    "notes": [
+      "ktunotes.in organizes notes by scheme→semester→branch :cite[1]:cite[3]",
+      "ktuspecial.in focuses on 2024 scheme with course codes (e.g., GXCYT122) :cite[2]:cite[5]:cite[9]",
+      "S4 CSE 2019 notes include Graph Theory, DBMS, OS at keralanotes.com (linked by ktunotes.in) :cite[4]:cite[8]",
+      "Common subjects like Entrepreneurship appear under 'Common' branch :cite[5]"
+    ]
+  }
+}
