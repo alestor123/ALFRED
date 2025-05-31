@@ -1,29 +1,51 @@
 const cron = require('node-cron');
-const { Task } = require('../../schema/models');
+const { Task, User } = require('../../schema/models');
 const logger = require('../logging/logs');
 const moment = require('moment');
 
 async function sendTaskReminders(bot) {
     try {
-        // Find tasks with unsent reminders that are due
+        // Find tasks due in the next 10 minutes, not already reminded
+        const now = new Date();
+        const tenMinsLater = moment(now).add(10, 'minutes').toDate();
         const tasks = await Task.find({
             'reminders.sent': false,
-            'reminders.time': { 
-                $lte: new Date(),
-                $gte: moment().subtract(5, 'minutes').toDate() // Only check last 5 minutes
-            }
+            dueDate: { $gte: now, $lte: tenMinsLater }
         });
 
         for (const task of tasks) {
             try {
+                // Check if user has muted reminders
+                const user = await User.findOne({ chatId: String(task.chatId) });
+                if (user?.settings?.isSilenced) {
+                    logger(`Reminders muted for user ${task.chatId}, skipping reminder for task: ${task.title}`);
+                    continue;
+                }
+                // Ensure required fields are present and non-empty
+                if (!task.title || typeof task.title !== 'string' || !task.title.trim() ||
+                    !task.description || typeof task.description !== 'string' || !task.description.trim() ||
+                    !task.dueDate || isNaN(new Date(task.dueDate))) {
+                    logger(`Skipping reminder for task with missing or invalid fields: ${JSON.stringify(task)}`);
+                    continue;
+                }
+                // Calculate minutes left
+                const minsLeft = Math.round((new Date(task.dueDate) - now) / 60000);
+                let timeMsg = minsLeft <= 1 ? 'is due now!' : `is due in ${minsLeft} minutes!`;
+                const message =
+                    `⏰ *Task Reminder*\n\n` +
+                    `Your task "*${task.title}*" ${timeMsg}\n\n` +
+                    `📝 ${task.description}\n` +
+                    `📅 Due: ${moment(task.dueDate).format('MMM D, YYYY HH:mm')}\n` +
+                    `📊 Category: ${task.metadata?.category || ''}`;
+                // Final check: skip if message is empty or only whitespace
+                if (!message || typeof message !== 'string' || !message.replace(/\s/g, '').length) {
+                    logger(`Skipping reminder: constructed message is empty for task: ${JSON.stringify(task)}`);
+                    continue;
+                }
                 // Send reminder message
                 await bot.sendMessage(
                     task.chatId,
-                    `⏰ *Task Reminder*\n\n` +
-                    `Your task "*${task.title}*" is due in 1 hour!\n\n` +
-                    `📝 ${task.description}\n` +
-                    `📅 Due: ${moment(task.dueDate).format('MMM D, YYYY HH:mm')}\n` +
-                    `📊 Category: ${task.metadata.category}`,
+                    message,
                     { parse_mode: 'Markdown' }
                 );
 

@@ -1,5 +1,6 @@
 var db = require('../schema/db.js')
 var tasks = require('../static/config/task.json')
+const moment = require('moment');
 
 var questions = tasks.main
 var i = 0
@@ -17,6 +18,52 @@ module.exports = async (msg,bot) => {
     taskDetails["urgent"] = taskDetails["urgent"]=="yes"  ? 0:1
     taskDetails["stats"] = tasks.matrix[taskDetails["important"]][taskDetails["urgent"]]
     taskDetails["priorityIndex"] = tasks.priority_index.indexOf(taskDetails.priority);
+    
+    // Construct dueDate
+    try {
+        let taskDateStr = taskDetails.task_date; // "main" or "tomorrow"
+        let startTimeStr = taskDetails.startTime; // "HH:mm"
+
+        let dueDateMoment = moment(); // Default to now
+
+        if (taskDateStr === "main") {
+            // "main" means today, so dueDateMoment is already set to today
+        } else if (taskDateStr === "tomorrow") {
+            dueDateMoment.add(1, 'days');
+        } else {
+            // Fallback or error for unexpected task_date string if necessary
+            // For now, assume "main" or "tomorrow" from buttons
+            // If task_date could be a DD-MM-YY string, add parsing here
+            // Example: moment(taskDateStr, "DD-MM-YY")
+            console.warn("Unexpected task_date:", taskDateStr, "- defaulting to today for dueDate calculation.");
+        }
+
+        if (startTimeStr && typeof startTimeStr === 'string') {
+            const timeParts = startTimeStr.split(':');
+            if (timeParts.length === 2) {
+                const hour = parseInt(timeParts[0], 10);
+                const minute = parseInt(timeParts[1], 10);
+                if (!isNaN(hour) && !isNaN(minute)) {
+                    dueDateMoment.set({ hour: hour, minute: minute, second: 0, millisecond: 0 });
+                } else {
+                    console.error("Invalid startTime format:", startTimeStr, "- defaulting time to 00:00");
+                    dueDateMoment.set({ hour: 0, minute: 0, second: 0, millisecond: 0 });
+                }
+            } else {
+                console.error("Invalid startTime format:", startTimeStr, "- defaulting time to 00:00");
+                dueDateMoment.set({ hour: 0, minute: 0, second: 0, millisecond: 0 });
+            }
+        } else {
+            console.error("Missing or invalid startTime - defaulting time to 00:00");
+            dueDateMoment.set({ hour: 0, minute: 0, second: 0, millisecond: 0 });
+        }
+        taskDetails.dueDate = dueDateMoment.toDate();
+    } catch (error) {
+        console.error("Error constructing dueDate:", error);
+        // Fallback: set dueDate to now or handle error appropriately
+        taskDetails.dueDate = new Date(); 
+    }
+
     // eisenhower stats
     // IMP YES
     // URGENT NOW

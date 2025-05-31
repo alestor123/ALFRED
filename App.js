@@ -4,6 +4,7 @@ const { connectDB } = require('./utils/db/mongo');
 const logger = require('./utils/logging/logs');
 const { scheduleDailyReset } = require('./utils/cron/daily-reset');
 const { scheduleTaskReminders } = require('./utils/cron/task-reminders');
+const patchBotForTranslation = require('./utils/patchBotForTranslation');
 
 // Import controllers
 const register = require('./controllers/register');
@@ -19,6 +20,7 @@ const menu = require('./controllers/menu');
 const responses = require('./controllers/responses');
 const { startStudyMenu, handleStudyCallback } = require('./controllers/studyController.js');
 const { handleDailyReport } = require('./controllers/dayreport.js');
+const { handleSettingsCallback } = require('./controllers/settingsController.js');
 
 module.exports = (token) => {
     if (!token) {
@@ -27,6 +29,7 @@ module.exports = (token) => {
     }
 
     const bot = new TelegramBot(token, { polling: true });
+    patchBotForTranslation(bot);
 
     // Connect to MongoDB and initialize bot
     connectDB().then(() => {
@@ -90,6 +93,8 @@ module.exports = (token) => {
                     await fetchtask(callbackQuery, bot);
                 } else if (action.startsWith('prompt_')) {
                     await prompt(callbackQuery, bot);
+                } else if (action.startsWith('settings_')) {
+                    await handleSettingsCallback(callbackQuery, bot);
                 } else if (action === 'refresh_announcements') {
                     const refreshMsg = {
                         chat: {
@@ -99,16 +104,9 @@ module.exports = (token) => {
                     };
                     await updates(refreshMsg, bot);
                 } else if (action === 'menu') {
-                    await menu({ chat: { id: msg.chat.id }, message_id: msg.message_id }, bot);
+                    await menu(msg, bot);
                 } else {
-                    // Fallback to main menu listener if no other handler caught it.
-                    // This assumes the main menu sets up a general callback listener.
-                    // To avoid conflicts, it might be better if menu.js handles its own callbacks
-                    // or App.js explicitly calls menu's callback handler.
-                    // For now, let main menu's listener (if any active from its last call) try to handle it.
-                    // This part can be tricky if multiple controllers listen to general 'callback_query'.
-                    // A more robust system would have App.js explicitly call the relevant controller's callback handler
-                    // or ensure only one specific callback listener is active at a time per chat.
+                    logger.warn(`Unhandled callback query in App.js: ${action}`);
                 }
             } catch (error) {
                 logger.error(`Error in callback_query handler: ${error.message} (ChatID: ${callbackQuery.message.chat.id})`);

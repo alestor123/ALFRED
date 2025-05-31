@@ -28,7 +28,9 @@ const userSchema = new mongoose.Schema({
                 startTime: String,
                 endTime: String
             }]
-        }]
+        }],
+        isSilenced: { type: Boolean, default: false },
+        language: { type: String, default: 'en' }
     }
 });
 
@@ -85,9 +87,21 @@ const Cache = mongoose.model('Cache', cacheSchema);
 const Task = mongoose.model('Task', taskSchema);
 const Event = mongoose.model('Event', eventSchema);
 
+// Reminder Schema
+const reminderSchema = new mongoose.Schema({
+    chatId: { type: String, required: true },
+    reminderText: { type: String, required: true },
+    reminderTime: { type: Date, required: true },
+    isSent: { type: Boolean, default: false },
+    createdAt: { type: Date, default: Date.now }
+});
+
+const Reminder = mongoose.model('Reminder', reminderSchema);
+
 module.exports = {
     User,
     Cache,
     Task,
-    Event
+    Event,
+    Reminder
 }; 
